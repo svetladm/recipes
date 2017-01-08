@@ -1,0 +1,26 @@
+{
+  "recipes": [
+    {
+      "title": "Some recipe",
+      "ingredients": [
+        {
+          "quantity": "2s.l",
+          "name": "zahar"
+        },
+        {
+          "quantity": "2s.l",
+          "name": "zahar"
+        }
+      ],
+      "description": "some description",
+      "url": "some.url",
+      "image": "image.url"
+    },
+    {
+      "title": "Another recipe",
+      "description": "another description",
+      "url": "some.url",
+      "image": "image.url"
+    }
+  ]
+}
