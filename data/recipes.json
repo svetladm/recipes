@@ -1,8 +1,8 @@
 {
   "recipes": [
     {
-      "title": "Some recipe",
-      "description": "some description",
+      "title": "Жито с вода",
+      "description": "Описание",
       "ingredients": [
         {"quantity": 2, "unit": "чч", "name": "пшеница"},
         {"quantity": 300, "unit": "мл", "name": "вода"}
@@ -11,13 +11,13 @@
         "излейте водата в паница",
         "добавете пшеницата"
       ],
-      "url": "data/img/bread.jpg",
+      "url": "http://example.com",
       "image": "bread.jpg"
     },
     {
-      "title": "Another recipe",
-      "description": "another description",
-      "url": "data/img/bread.jpg",
+      "title": "Заглавие на рецептата",
+      "description": "Описание",
+      "url": "http://example.com",
       "image": "bread.jpg"
     }
   ]
