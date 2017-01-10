@@ -9,17 +9,53 @@
   <body ng-app="recipesApp">
     <div class="container" ng-controller="recipesController">
       <h1>Рецептите на Светла</h1>
-      <p>{{ ::add }}</p>
       <div class="row">
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" ng-repeat="recipe in recipes">
-          <div class="thumbnail">
-            <a href="/recipe.html">
-              <img ng-src="/data/img/{{recipe.image}}">
-              <div class="caption">
-                <h2>{{ recipe.title }}</h2>
-                <p>{{ recipe.description }}</p>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Списък</div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12" ng-repeat="recipe in recipes">
+                  <div class="thumbnail">
+                    <div ng-click="selectRecipe(recipe)"> <!-- TODO: make this <a> later -->
+                      <img ng-src="/data/img/{{recipe.image}}">
+                      <div class="caption">
+                        <h2>{{ recipe.title }}</h2>
+                        <p>{{ recipe.description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Избрана</div>
+            <div class="panel-body">
+              <div ng-if="selected">
+                <h2>{{ selected.title }}</h2>
+                <div class="thumbnail">
+                  <img ng-src="/data/img/{{ selected.image }}">
+                </div>
+                <p>{{ selected.description }}</p>
+                <ul ng-if="selected.ingredients">
+                  <h3>Съставки</h3>
+                  <li ng-repeat="ingredient in selected.ingredients">
+                    {{ ingredient.quantity }}
+                    {{ ingredient.unit }}
+                    {{ ingredient.name }}
+                  </li>
+                </ul>
+                <ul ng-if="selected.ingredients">
+                  <h3>Приготвяне</h3>
+                  <li ng-repeat="step in selected.preparation">{{ step }}</li>
+                </ul>
+                <h3>Източник</h3>
+                <p>{{ selected.url }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
