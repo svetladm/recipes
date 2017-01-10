@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Рецепти</title>
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body ng-app="recipesApp">
     <div class="container" ng-controller="recipesController">
@@ -18,7 +18,7 @@
                 <div class="col-md-6 col-sm-12 col-xs-12" ng-repeat="recipe in recipes">
                   <div class="thumbnail">
                     <div ng-click="selectRecipe(recipe)"> <!-- TODO: make this <a> later -->
-                      <img ng-src="/data/img/{{recipe.image}}">
+                      <img ng-src="./data/img/{{recipe.image}}">
                       <div class="caption">
                         <h2>{{ recipe.title }}</h2>
                         <p>{{ recipe.description }}</p>
@@ -37,7 +37,7 @@
               <div ng-if="selected">
                 <h2>{{ selected.title }}</h2>
                 <div class="thumbnail">
-                  <img ng-src="/data/img/{{ selected.image }}">
+                  <img ng-src="./data/img/{{ selected.image }}">
                 </div>
                 <p>{{ selected.description }}</p>
                 <ul ng-if="selected.ingredients">
@@ -62,7 +62,7 @@
     </div>
 
     <!-- <script type="text/javascript" src="./js/jquery-3.1.1.js"></script> -->
-    <script type="text/javascript" src="/js/angular.js"></script>
-    <script type="text/javascript" src="/js/recipes.js"></script>
+    <script type="text/javascript" src="./js/angular.js"></script>
+    <script type="text/javascript" src="./js/recipes.js"></script>
   </body>
 </html>
