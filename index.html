@@ -3,13 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Рецепти</title>
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body>
-    <h1>Рецептите на Светла</h1>
+  <body ng-app="recipesApp">
+    <div class="container" ng-controller="recipesController">
+      <h1>Рецептите на Светла</h1>
+      <p>{{ ::add }}</p>
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" ng-repeat="recipe in recipes">
+          <div class="thumbnail">
+            <a href="/recipe.html">
+              <img ng-src="/data/img/{{recipe.image}}">
+              <div class="caption">
+                <h2>{{ recipe.title }}</h2>
+                <p>{{ recipe.description }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="./js/recipes.js"></script>
+    <!-- <script type="text/javascript" src="./js/jquery-3.1.1.js"></script> -->
+    <script type="text/javascript" src="/js/angular.js"></script>
+    <script type="text/javascript" src="/js/recipes.js"></script>
   </body>
 </html>

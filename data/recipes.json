@@ -2,25 +2,23 @@
   "recipes": [
     {
       "title": "Some recipe",
-      "ingredients": [
-        {
-          "quantity": "2s.l",
-          "name": "zahar"
-        },
-        {
-          "quantity": "2s.l",
-          "name": "zahar"
-        }
-      ],
       "description": "some description",
-      "url": "some.url",
-      "image": "image.url"
+      "ingredients": [
+        {"quantity": 2, "unit": "чч", "name": "пшеница"},
+        {"quantity": 300, "unit": "мл", "name": "вода"}
+      ],
+      "preparation": [
+        "излейте водата в паница",
+        "добавете пшеницата"
+      ],
+      "url": "data/img/bread.jpg",
+      "image": "bread.jpg"
     },
     {
       "title": "Another recipe",
       "description": "another description",
-      "url": "some.url",
-      "image": "image.url"
+      "url": "data/img/bread.jpg",
+      "image": "bread.jpg"
     }
   ]
 }
