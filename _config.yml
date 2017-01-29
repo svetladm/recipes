@@ -8,6 +8,7 @@ exclude:
   - Gemfile.lock
 
 # here start the non-default configuration
+url: "https://archri.github.com/recipes"
 collections:
   recipes:
     output: true
