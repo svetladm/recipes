@@ -1,0 +1,13 @@
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# here start the non-default configuration
+collections:
+  recipes:
+    output: true
