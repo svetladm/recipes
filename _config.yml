@@ -14,8 +14,7 @@ collections:
     output: true
 
 defaults:
-  # set a helper property for images, so they can be filtered easily
   - scope:
-      path: "assets/img"
+      path: "_recipes"
     values:
-      image: true
+      layout: "recipe"
