@@ -6,7 +6,7 @@ scripts:
 ---
 {% assign page_path_split = page.path | split: "/" %}
 {% assign recipe_name = page_path_split.last | remove: ".md" %}
-{% assign image_files_all = site.static_files | where: "extname", ".jpg" %}
+{% assign image_files_all = site.static_files | where: "extname", ".jpg" | map: "basename" | uniq %}
 
 <div class="col-sm-6">
   {{ content }}
@@ -14,21 +14,21 @@ scripts:
 <div class="col-sm-6">
   <div class="row">
     {% for image in image_files_all %}
-      {% assign ending = image.basename.size | minus: 2 %}
-      {% assign image_recipe = image.basename | slice: 0, ending %}
+      {% assign ending = image.size | minus: 2 %}
+      {% assign image_recipe = image | slice: 0, ending %}
       {% if image_recipe == recipe_name %}
-        {% assign image_number_index = image.basename.size | minus: 1 %}
-        {% assign image_number = image.basename | slice: image_number_index %}
+        {% assign image_number_index = image.size | minus: 1 %}
+        {% assign image_number = image | slice: image_number_index %}
         {% if image_number == "1" %}
           <div class="col-xs-12 hidden-xxs">
             <div class="thumbnail">
-              <img src="{{ site.baseurl }}{{ image.path }}" id="image-placeholder">
+              <img src="{{ site.baseurl }}/assets/img/medium/{{ image }}.jpg" id="image-placeholder">
             </div>
           </div>
         {% endif %}
         <a href="" class="image-small col-md-4 col-xs-6 col-xxs-12">
           <div class="thumbnail">
-            <img src="{{ site.baseurl }}{{ image.path }}">
+            <img src="{{ site.baseurl }}/assets/img/medium/{{ image }}.jpg">
           </div>
         </a>
       {% endif %}
