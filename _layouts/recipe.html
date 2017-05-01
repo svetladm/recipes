@@ -19,13 +19,13 @@ layout: default
         {% if image_number == "1" %}
           <div class="col-xs-12">
             <div class="thumbnail">
-              <img src="{{ image.path }}">
+              <img src="{{ site.baseurl }}{{ image.path }}">
             </div>
           </div>
         {% endif %}
         <div class="col-lg-3 col-md-4 col-xs-6">
           <div class="thumbnail">
-            <img src="{{ image.path }}">
+            <img src="{{ site.baseurl }}{{ image.path }}">
           </div>
         </div>
       {% endif %}
