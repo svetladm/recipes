@@ -1,11 +1,26 @@
 ---
 layout: default
 ---
+{% assign images_prefix = page.path | replace: "_recipes/", "" | replace: ".md", "" %}
 <div class="col-sm-6">
   {{ content }}
 </div>
 <div class="col-sm-6">
-  <div class="thumbnail">
-    <img src="{{ site.baseurl }}/assets/img/{{ page.image }}">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="thumbnail">
+        <img src="{{ site.baseurl }}/assets/img/{{ images_prefix }}_1.jpg">
+      </div>
+    </div>
+
+    {% for i in (1..page.images) %}
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <div class="thumbnail">
+          <img src="{{ site.baseurl }}/assets/img/{{ images_prefix }}_{{ i }}.jpg">
+        </div>
+      </div>
+    {% endfor %}
+    </div>
   </div>
+
 </div>

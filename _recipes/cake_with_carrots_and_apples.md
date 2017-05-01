@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Постен сладкиш с моркови и ябълки
-image: cake_with_carrots_and_apples.jpg
+images: 3
 ---
 ### НЕОБХОДИМИ ПРОДУКТИ  
 - 1 1/2 ч.ч. настъргани моркови
