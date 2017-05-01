@@ -20,7 +20,7 @@ scripts:
         {% assign image_number_index = image.basename.size | minus: 1 %}
         {% assign image_number = image.basename | slice: image_number_index %}
         {% if image_number == "1" %}
-          <div class="col-xs-12">
+          <div class="col-xs-12 hidden-xxs">
             <div class="thumbnail">
               <img src="{{ site.baseurl }}{{ image.path }}" id="image-placeholder">
             </div>
