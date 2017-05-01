@@ -12,3 +12,9 @@ url: "https://archri.github.com/recipes"
 collections:
   recipes:
     output: true
+
+defaults:
+  - scope:
+      path: "_recipes"
+    values:
+      layout: "recipe"
